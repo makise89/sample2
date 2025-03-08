@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規作成</title>
+
+
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+        }
+
+        p{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    
+
+    <form method="post" action="/form">
+        <h1>新規作成</h1>
+        <p><%= error %></p>
+        <label for="username">ユーザーネーム</label>
+        <input type="text" name="username" id="username">
+        <label for="email">メールアドレス</label>
+        <input type="text" name="email" id="email">
+        <label for="password">パスワード</label>
+        <input type="text" name="password" id="password">
+        <input type="submit" value="送信">
+    </form>
+</body>
+</html>

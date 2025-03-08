@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規作成</title>
+
+
+    <style>
+
+        html,body{
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        p{
+            font-size: 18px;
+            color: red;
+        }
+
+
+        label{
+            font-size: 20px;         
+        }
+
+        input[type="text"]{
+            display: block;
+            width: 500px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+
+        input[type="submit"]{
+            margin: 0 auto;
+            display: block;
+            width: 150px;
+            height: 50px;
+            color: white;
+            cursor: pointer;
+            background-color: #10CBFF;
+            margin-top: 20px;            
+        }
+
+
+        @media(max-width:580px){
+            form{             
+                width:100%;               
+                padding: 0;
+            }
+            input[type="text"]{
+                width: calc(100% - 40px);            
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+            label{
+                width: calc(100% - 40px);            
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    
+
+    <h1><%= title %></h1>
+    <p><%= error %></p>
+
+    <form method="post" action="/form">
+        <label for="username">ユーザーネーム</label>
+        <input type="text" name="username" id="username">
+        <label for="email">メールアドレス</label>
+        <input type="text" name="email" id="email">
+        <label for="password">パスワード</label>
+        <input type="text" name="password" id="password">
+        <input type="submit" value="送信">
+    </form>
+</body>
+</html>

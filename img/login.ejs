@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <style>
+
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+
+        label{
+            display: block;
+        }
+
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1><%=title %></h1>
+    <p><%=error %></p>
+
+    <form method="post" action="/login">
+        <label for="id">メールアドレス</label>
+        <input type="text" name="email" id="id">
+        <label for="password">パスワード</label>
+        <input type="text" name="password" id="password">
+
+        <input type="submit" value="ログイン">
+    </form>
+
+    <a href="/form">新規作成</a>
+</body>
+</html>

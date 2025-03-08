@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECサイト</title>
+    <link rel="stylesheet" href="/ecstyle">
+</head>
+<body>
+
+    <!--header-->
+
+    <header>
+    <div class="nav-div">
+        <a href="">
+            <img src="/images" alt="カートのロゴ" width="50" height="50">
+        </a>
+
+        <nav>
+            <ul class="nav-ul">
+                <li>ホーム</li>
+                <li>カートを表示</li>
+                <li>お気に入り一覧</li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <!--section-->
+
+    <div class="catalog-page">商品一覧</div>
+    
+    <form class="serch" action="/ec/serch">
+        <div>
+            <select name="category" id="" class="catalog">           
+                <option value="all">全て</option>
+                <option value="electronics">家電</option>
+                <option value="fashion">ファッション</option>
+            </select>
+    
+            <input type="search" class="keyword" name="keyword" placeholder="キーワードを入力">
+    
+            <input type="submit" class="serch-btn" value="検索する">
+        </div>
+            
+        <div>
+            <label for="sort" class="sort-label">表示順</label>
+            <select name="order" class="sort-display" id="sort">
+                <option value="recommend">おすすめ順</option>
+                <option value="orderAsc">人気順</option>
+                <option value="priceAsc">価格が安い順</option>
+            </select>
+        </div>
+    </form>  
+
+    <main>
+        <div class="main-container">
+            <%-content %>
+        </div>      
+    </main>
+</body>
+</html>
