@@ -7,7 +7,7 @@ const ejs = require('ejs');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
 const ecRouter = require('./router/ec');
-const axios = require('axios');
+
 
 const app = express();
 
