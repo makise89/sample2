@@ -40,8 +40,10 @@ app.use(session({
     cookie:{maxAge:1000*60*60}
 }));
 
-
+app.use(express.json());
 app.use('/ec',ecRouter);
+
+
 
 
 //スタイルシートの処理
@@ -49,6 +51,14 @@ app.use('/ec',ecRouter);
 app.get('/ecstyle',(req,res) => {
     res.sendFile(path.join(__dirname,"ecstyle.css"));
 });
+
+//script処理
+
+app.get('/ecscript',(req,res) => {
+    console.log('script読み込まれました')
+    res.sendFile(path.join(__dirname,"ecscript.js"));
+});
+
 
 
 //画像の処理
